@@ -32,6 +32,7 @@ public class Container<T> {
             arr[i] = arr[i - 1];
         }
         arr[number] = element;
+        size++;
     }
     // Добавляем элемент в конец контейнера
     public void push(T element) {
