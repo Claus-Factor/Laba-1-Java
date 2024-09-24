@@ -42,6 +42,16 @@ public class Container<T> {
         add(element, 0);
     }
 
+    // Удаление элемента по заданному номеру
+    public void remove(int number) {
+        if (number <= size && number >= 0) {
+            for (int i = number; i <= size - 2; i++) {
+                arr[i] = arr[i + 1];
+            }
+            size--;
+        }
+    }
+
     // Считываем значение n-го элемента
     public T get(int number) {
         if (number <= size && number >= 0) {
