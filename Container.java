@@ -23,13 +23,6 @@ public class Container<T> {
        this(10);
     }
 
-    // Добавляем элемент в конец контейнера
-    public void add(T element) {
-        if (size == capacity) {
-            this.resize();
-        }
-        arr[size] = element;
-    }
     // Добавляем элемент в определённое место по номеру
     public void add(T element, int number) {
         if (size == capacity) {
@@ -39,6 +32,10 @@ public class Container<T> {
             arr[i] = arr[i - 1];
         }
         arr[number] = element;
+    }
+    // Добавляем элемент в конец контейнера
+    public void push(T element) {
+        add(element, size);
     }
 
     // Считываем значение n-го элемента
