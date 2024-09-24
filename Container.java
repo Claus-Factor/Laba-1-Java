@@ -62,7 +62,21 @@ public class Container<T> {
         return get(size-1);
     }
 
+    // Извлекаем элемент с конца (метод из стека)
+    public T pop() {
+        T temp = this.get(size - 1);
+        this.remove(size - 1);
+        return temp;
+    }
+    // Извлекаем элемент с начала (сдвигаем контейнер влево)
+    public T shift() {
+        T temp = this.get(0);
+        this.remove(0);
+        return temp;
+    }
 
-
+    public int getSize() {
+        return size;
+    }
 
 }
