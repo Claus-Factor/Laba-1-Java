@@ -22,4 +22,11 @@ public class Container<T> {
        this(10);
     }
 
+    public void add(T element) {
+        if (size == capacity) {
+            this.resize();
+        }
+        arr[size] = element;
+    }
+
 }
