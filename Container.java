@@ -37,6 +37,10 @@ public class Container<T> {
     public void push(T element) {
         add(element, size);
     }
+    // Добавляем элемент в начало контейнера
+    public void unshift(T element) {
+        add(element, 0);
+    }
 
     // Считываем значение n-го элемента
     public T get(int number) {
