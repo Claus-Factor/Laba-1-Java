@@ -28,5 +28,12 @@ public class Container<T> {
         }
         arr[size] = element;
     }
+    public T get(int number) {
+        if (number <= size && number >= 0) {
+            return arr[number];
+        } else return null;
+    }
+
+
 
 }
