@@ -30,6 +30,16 @@ public class Container<T> {
         }
         arr[size] = element;
     }
+    // Добавляем элемент в определённое место по номеру
+    public void add(T element, int number) {
+        if (size == capacity) {
+            this.resize();
+        }
+        for (int i = number + 1; i <= size; i++) {
+            arr[i] = arr[i - 1];
+        }
+        arr[number] = element;
+    }
 
     // Считываем значение n-го элемента
     public T get(int number) {
@@ -40,6 +50,8 @@ public class Container<T> {
     public T get() {
         return get(size-1);
     }
+
+
 
 
 }
